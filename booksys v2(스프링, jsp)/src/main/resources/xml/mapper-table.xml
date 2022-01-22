@@ -1,0 +1,53 @@
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="booksys.persistency.TableMapper">
+	<select id="findList" resultType="TableDTO">
+		SELECT
+			oid,
+			number,
+			places
+		FROM `Table`
+		ORDER BY oid
+	</select>
+	
+	<select id="findOneByNumber" parameterType="int" resultType="TableDTO">
+		SELECT
+			oid,
+			number,
+			places
+		FROM `Table`
+		WHERE number=#{number}
+	</select>
+	
+	<select id="findOneByOid" parameterType="int" resultType="TableDTO">
+		SELECT
+			oid,
+			number,
+			places
+		FROM `Table`
+		WHERE oid=#{oid}
+	</select>
+	
+	<insert id="save" parameterType="TableDTO">
+		INSERT INTO `Table`(
+			number,
+			places		
+		) VALUES(
+			#{number},
+			#{places}
+		)
+	</insert>
+	
+	<update id="update" parameterType="TableDTO">
+		UPDATE `Table`
+		SET
+			places=#{places}
+		WHERE number=#{number}
+	</update>
+	
+	<delete id="deleteByNumber" parameterType="int">
+		DELETE FROM `Table` WHERE number=#{number}
+	</delete>
+</mapper>

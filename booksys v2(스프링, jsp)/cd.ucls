@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="booksys.DemoApplication" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/DemoApplication.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="120" x="407" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="booksys.domain.CustomerDTO" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/domain/CustomerDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="531" width="191" x="782" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="booksys.persistency.CustomerMapper" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/persistency/CustomerMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="243" x="1045" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" language="java" name="booksys.persistency.OidMapper" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/persistency/OidMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="127" x="1328" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="booksys.domain.OidDTO" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/domain/OidDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="118" x="1013" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="booksys.domain.ReservationDTO" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/domain/ReservationDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="216" x="567" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="booksys.domain.WalkInDTO" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/domain/WalkInDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="387" width="175" x="567" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="booksys.persistency.ReservationMapper" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/persistency/ReservationMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="194" x="1495" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="9" language="java" name="booksys.persistency.WalkInMapper" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/persistency/WalkInMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="167" x="1729" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" language="java" name="booksys.controller.WebController" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/controller/WebController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="621" width="310" x="1171" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="booksys.persistency.TableMapper" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/persistency/TableMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="182" x="1936" y="721"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="12" language="java" name="booksys.controller.DatabaseController" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/controller/DatabaseController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="531" width="290" x="1681" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="booksys.domain.TableDTO" project="booksys_v2" 
+    file="/booksys_v2/src/main/java/booksys/domain/TableDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="120" x="1521" y="60"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="14">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="15" name="oidMapper"/>      
+      <multiplicity id="16" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="18" name="reservationMapper"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="21" name="customerMapper"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="24">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="25" name="tableMapper"/>      
+      <multiplicity id="26" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="27">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="28" name="walkInMapper"/>      
+      <multiplicity id="29" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

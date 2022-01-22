@@ -1,0 +1,56 @@
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="booksys.persistency.WalkInMapper">
+	<select id="findList" resultType="WalkInDTO">
+		SELECT
+			oid,
+			covers,
+			date,
+			time,
+			table_id
+		FROM `WalkIn`
+	</select>
+	
+	<select id="findOneByOid" parameterType="int" resultType="WalkInDTO">
+		SELECT
+			oid,
+			covers,
+			date,
+			time,
+			table_id
+		FROM `WalkIn`
+		WHERE oid=#{oid}
+	</select>
+	
+	<insert id="save" parameterType="WalkInDTO">
+		INSERT INTO `WalkIn`(
+			oid,
+			covers,
+			date,
+			time,
+			table_id
+		) VALUES(
+			#{oid},
+			#{covers},
+			#{date},
+			#{time},
+			#{table_id}
+		)
+	</insert>
+	
+	<update id="update" parameterType="WalkInDTO">
+		UPDATE `WalkIn`
+		SET
+			covers=#{covers},
+			date=#{date},
+			time=#{time},
+			table_id=#{table_id}
+		WHERE oid=#{oid}
+	</update>
+	
+	<delete id="deleteByOid" parameterType="int">
+		DELETE FROM `WalkIn` WHERE oid=#{oid}
+	</delete>
+</mapper>

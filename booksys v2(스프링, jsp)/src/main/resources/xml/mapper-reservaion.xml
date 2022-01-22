@@ -1,0 +1,64 @@
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="booksys.persistency.ReservationMapper">
+	<select id="findList" resultType="ReservationDTO">
+		SELECT
+			oid,
+			covers,
+			date,
+			time,
+			table_id,
+			customer_id,
+			arrivalTime
+		FROM `Reservation`
+	</select>
+	
+	<select id="findOneByOid" parameterType="int" resultType="ReservationDTO">
+		SELECT
+			oid,
+			covers,
+			date,
+			time,
+			table_id,
+			customer_id,
+			arrivalTime
+		FROM `Reservation`
+		WHERE oid=#{oid}
+	</select>
+	
+	<insert id="save" parameterType="ReservationDTO">
+		INSERT INTO `Reservation`(
+			oid,
+			covers,
+			date,
+			time,
+			table_id,
+			customer_id
+		) VALUES(
+			#{oid},
+			#{covers},
+			#{date},
+			#{time},
+			#{table_id},
+			#{customer_id}
+		)
+	</insert>
+	
+	<update id="update" parameterType="ReservationDTO">
+		UPDATE `Reservation`
+		SET
+			covers=#{covers},
+			date=#{date},
+			time=#{time},
+			table_id=#{table_id},
+			customer_id=#{customer_id},
+			arrivalTime=#{arrivalTime}
+		WHERE oid=#{oid}
+	</update>
+	
+	<delete id="deleteByOid" parameterType="int">
+		DELETE FROM `Reservation` WHERE oid=#{oid}
+	</delete>
+</mapper>

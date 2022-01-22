@@ -1,0 +1,83 @@
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="booksys.persistency.CustomerMapper">
+	<select id="findList" resultType="CustomerDTO">
+		SELECT
+			oid,
+			userId,
+			password,
+			name,
+			phoneNumber,
+			reservationCount,
+			arrivalCount,
+			grade
+		FROM `Customer`
+		ORDER BY oid
+	</select>
+	
+	<select id="findOneByUserId" parameterType="String" resultType="CustomerDTO">
+		SELECT
+			oid,
+			userId,
+			password,
+			name,
+			phoneNumber,
+			reservationCount,
+			arrivalCount,
+			grade
+		FROM `Customer`
+		WHERE userId=#{userId}
+	</select>
+	
+	<select id="findOneByOid" parameterType="int" resultType="CustomerDTO">
+		SELECT
+			oid,
+			userId,
+			password,
+			name,
+			phoneNumber,
+			reservationCount,
+			arrivalCount,
+			grade
+		FROM `Customer`
+		WHERE oid=#{oid}
+	</select>	
+	
+	<insert id="save" parameterType="CustomerDTO">
+		INSERT INTO `Customer`(
+			userId,
+			password,
+			name,
+			phoneNumber
+		) VALUES(
+			#{userId},
+			#{password},
+			#{name},
+			#{phoneNumber}
+		)
+	</insert>
+	
+	<update id="update" parameterType="CustomerDTO">
+		UPDATE `Customer`
+		<set>
+			<if test="password != null">password=#{password}</if>
+			<if test="phoneNumber != null">phoneNumber=#{phoneNumber}</if>
+			<if test="reservationCount != 0">reservationCount=#{reservationCount}</if>
+			<if test="arrivalCount != 0">arrivalCount=#{arrivalCount}</if>
+			<if test="grade != 0">grade=#{grade}</if>
+		</set>
+		WHERE userId=#{userId}
+	</update>
+	
+	<update id="updateReservationCount" parameterType="CustomerDTO">
+		UPDATE `Customer`
+		SET reservationCount=#{reservationCount}
+		WHERE userId=#{userId}
+	</update>
+	
+	<delete id="deleteByUserId" parameterType="String">
+		DELETE FROM `Customer` WHERE userId=#{userId}
+	</delete>
+</mapper>

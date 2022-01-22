@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booksys.UserManager.managerCon">
+<children>
+      <Pane prefHeight="468.0" prefWidth="697.0">
+         <children>
+            <Label layoutX="32.0" layoutY="51.0" text="유저 관리">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <TableView fx:id="userTable" layoutX="32.0" layoutY="117.0" onMouseClicked="#tableClick" prefHeight="297.0" prefWidth="649.0">
+              <columns>
+                <TableColumn fx:id="user" prefWidth="40.0" text="#" />
+                <TableColumn fx:id="userId" prefWidth="110.0" text="아이디" />
+                  <TableColumn fx:id="name" prefWidth="70.0" text="이름" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="150.0" text="전화" />
+                  <TableColumn fx:id="reservationCount" prefWidth="75.0" text="예약 횟수" />
+                  <TableColumn fx:id="arrivalCount" prefWidth="75.0" text="도착 횟수" />
+                  <TableColumn fx:id="grade" minWidth="3.0" prefWidth="45.0" text="등급" />
+                  <TableColumn fx:id="block" prefWidth="68.0" text="차단 여부" />
+              </columns>
+            </TableView>
+            <Button layoutX="626.0" layoutY="79.0" mnemonicParsing="false" onAction="#Delete" text="삭제" />
+            <Button layoutX="547.0" layoutY="79.0" mnemonicParsing="false" onAction="#UnBlock" text="차단 해제" />
+            <Button layoutX="482.0" layoutY="79.0" mnemonicParsing="false" onAction="#Block" prefHeight="23.0" prefWidth="54.0" text="차단" />
+            <Button fx:id="ReButton" layoutX="401.0" layoutY="79.0" mnemonicParsing="false" onAction="#refresh" prefHeight="23.0" prefWidth="68.0" text="새로고침" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

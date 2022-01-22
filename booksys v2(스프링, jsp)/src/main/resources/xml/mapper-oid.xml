@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="booksys.persistency.OidMapper">
+	<select id="find" resultType="OidDTO">
+		SELECT
+			*
+		FROM `Oid`
+	</select>
+	
+	<update id="update" parameterType="OidDTO">
+		UPDATE `Oid`
+		SET
+			last_id=#{last_id}
+	</update>
+</mapper>
